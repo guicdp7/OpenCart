@@ -6,6 +6,9 @@ $_['heading_title']       = 'FreteClick';
 $_['text_extension']   	  	= 'Extensões';
 $_['text_subject']          = 'Configuração do FreteClick';
 $_['text_success'] = 'Configuração FreteClick atualizada com sucesso!';
+$_['text_enabled'] = 'Habilitado';
+$_['text_disabled'] = 'Disabilitado';
+$_['entry_sort_order'] = 'Posição';
 
 // Entry
 $_['entry_cep_origin'] = 'CEP de Origem';
@@ -18,6 +21,7 @@ $_['entry_state_origin'] = 'Estado de Origem';
 $_['entry_country_origin'] = 'Pais de Origem';
 $_['entry_api_key'] = "API Key";
 $_['entry_carriers_number'] = "Número de Transportadoras";
+$_['entry_status'] = 'Status do FreteClick';
 
 // Help
 $_['help_cep_origin'] = 'Informe o CEP de onde a mercadoria será coletada';

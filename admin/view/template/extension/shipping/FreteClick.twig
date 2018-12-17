@@ -29,76 +29,76 @@
                     <div class="form-group required">
                         <label class="col-sm-2 control-label" for="cep-origin"><span data-toggle="tooltip" title="{{ help_cep_origin }}">{{ entry_cep_origin }}</span></label>
                         <div class="col-sm-10">
-                            <input type="text" id="cep-origin" name="FC_CEP_ORIGIN" value="{{ data.FC_CEP_ORIGIN }}" placeholder="{{ entry_cep_origin }}" class="form-control fc-input-cep" required/>
+                            <input type="text" id="cep-origin" name="FC_CEP_ORIGIN" value="{{ data.FC_CEP_ORIGIN }}" placeholder="{{ entry_cep_origin }}" class="form-control fc-input-cep cep-origin" required/>
                         </div>
                     </div>
                     <div class="form-group required">
                         <label class="col-sm-2 control-label" for="street-origin"><span data-toggle="tooltip" title="{{ help_street_origin }}">{{ entry_street_origin }}</span></label>
                         <div class="col-sm-6">
-                            <input type="text" id="street-origin" name="FC_STREET_ORIGIN" value="{{ data.FC_STREET_ORIGIN }}" placeholder="{{ entry_street_origin }}" class="form-control" required/>
+                            <input type="text" id="street-origin" name="FC_STREET_ORIGIN" value="{{ data.FC_STREET_ORIGIN }}" placeholder="{{ entry_street_origin }}" class="form-control street-origin" required/>
                         </div>
                         <label class="col-sm-2 control-label" for="number-origin"><span data-toggle="tooltip" title="{{ help_number_origin }}">{{ entry_number_origin }}</span></label>
                         <div class="col-sm-2">
-                            <input type="text" id="number-origin" name="FC_NUMBER_ORIGIN" value="{{ data.FC_NUMBER_ORIGIN }}" placeholder="{{ entry_number_origin }}" class="form-control" required/>
+                            <input type="text" id="number-origin" name="FC_NUMBER_ORIGIN" value="{{ data.FC_NUMBER_ORIGIN }}" placeholder="{{ entry_number_origin }}" class="form-control number-origin" required/>
                         </div>
                     </div>
                     <div class="form-group">
                         <label class="col-sm-2 control-label" for="complement-origin"><span data-toggle="tooltip" title="{{ help_complement_origin }}">{{ entry_complement_origin }}</span></label>
                         <div class="col-sm-10">
-                            <input type="text" id="complement-origin" name="FC_COMPLEMENT_ORIGIN" value="{{ data.FC_COMPLEMENT_ORIGIN }}" placeholder="{{ entry_complement_origin }}" class="form-control"/>
+                            <input type="text" id="complement-origin" name="FC_COMPLEMENT_ORIGIN" value="{{ data.FC_COMPLEMENT_ORIGIN }}" placeholder="{{ entry_complement_origin }}" class="form-control complement-origin"/>
                         </div>
                     </div>
                     <div class="form-group required">
                         <label class="col-sm-2 control-label" for="district-origin"><span data-toggle="tooltip" title="{{ help_district_origin }}">{{ entry_district_origin }}</span></label>
                         <div class="col-sm-10">
-                            <input type="text" id="district-origin" name="FC_DISTRICT_ORIGIN" value="{{ data.FC_DISTRICT_ORIGIN }}" placeholder="{{ entry_district_origin }}" class="form-control" required/>
+                            <input type="text" id="district-origin" name="FC_DISTRICT_ORIGIN" value="{{ data.FC_DISTRICT_ORIGIN }}" placeholder="{{ entry_district_origin }}" class="form-control district-origin" required/>
                         </div>
                     </div>
                     <div class="form-group required">
                         <label class="col-sm-2 control-label" for="city-origin"><span data-toggle="tooltip" title="{{ help_city_origin }}">{{ entry_city_origin }}</span></label>
                         <div class="col-sm-10">
-                            <input type="text" id="city-origin" name="FC_CITY_ORIGIN" value="{{ data.FC_CITY_ORIGIN }}" placeholder="{{ entry_city_origin }}" class="form-control" required/>
+                            <input type="text" id="city-origin" name="FC_CITY_ORIGIN" value="{{ data.FC_CITY_ORIGIN }}" placeholder="{{ entry_city_origin }}" class="form-control city-origin" required/>
                         </div>
                     </div>
                     <div class="form-group required">
                         <label class="col-sm-2 control-label" for="state-origin"><span data-toggle="tooltip" title="{{ help_state_origin }}">{{ entry_state_origin }}</span></label>
                         <div class="col-sm-10">
-                            <select name="FC_STATE_ORIGIN" id="state-origin" class="form-control" required>
+                            <select name="FC_STATE_ORIGIN" id="state-origin" class="form-control state-origin" required>{% set uf, sl = data.FC_STATE_ORIGIN, ' selected="selected"' %}
                                 <option value="0">- Escolha -</option>
-                                <option value="AC">Acre</option>
-                                <option value="AL">Alagoas</option>
-                                <option value="AP">Amapá</option>
-                                <option value="AM">Amazonas</option>
-                                <option value="BA">Bahia</option>
-                                <option value="CE">Ceará</option>
-                                <option value="DF">Distrito Federal</option>
-                                <option value="ES">Espírito Santo</option>
-                                <option value="GO">Goiás</option>
-                                <option value="MA">Maranhão</option>
-                                <option value="MT">Mato Grosso</option>
-                                <option value="MS">Mato Grosso do Sul</option>
-                                <option value="MG">Minas Gerais</option>
-                                <option value="PA">Pará</option>
-                                <option value="PB">Paraíba</option>
-                                <option value="PR">Paraná</option>
-                                <option value="PE">Pernambuco</option>
-                                <option value="PI">Piauí</option>
-                                <option value="RJ">Rio de Janeiro</option>
-                                <option value="RN">Rio Grande do Norte</option>
-                                <option value="RS">Rio Grande do Sul</option>
-                                <option value="RO">Rondônia</option>
-                                <option value="RR">Roraima</option>
-                                <option value="SC">Santa Catarina</option>
-                                <option value="SP">São Paulo</option>
-                                <option value="SE">Sergipe</option>
-                                <option value="TO">Tocantins</option>
+                                <option value="AC"{% if uf == 'AC' %}{{ sl }}{% endif %}>Acre</option>
+                                <option value="AL"{% if uf == 'AL' %}{{ sl }}{% endif %}>Alagoas</option>
+                                <option value="AP"{% if uf == 'AP' %}{{ sl }}{% endif %}>Amapá</option>
+                                <option value="AM"{% if uf == 'AM' %}{{ sl }}{% endif %}>Amazonas</option>
+                                <option value="BA"{% if uf == 'BA' %}{{ sl }}{% endif %}>Bahia</option>
+                                <option value="CE"{% if uf == 'CE' %}{{ sl }}{% endif %}>Ceará</option>
+                                <option value="DF"{% if uf == 'DF' %}{{ sl }}{% endif %}>Distrito Federal</option>
+                                <option value="ES"{% if uf == 'ES' %}{{ sl }}{% endif %}>Espírito Santo</option>
+                                <option value="GO"{% if uf == 'GO' %}{{ sl }}{% endif %}>Goiás</option>
+                                <option value="MA"{% if uf == 'MA' %}{{ sl }}{% endif %}>Maranhão</option>
+                                <option value="MT"{% if uf == 'MT' %}{{ sl }}{% endif %}>Mato Grosso</option>
+                                <option value="MS"{% if uf == 'MS' %}{{ sl }}{% endif %}>Mato Grosso do Sul</option>
+                                <option value="MG"{% if uf == 'MG' %}{{ sl }}{% endif %}>Minas Gerais</option>
+                                <option value="PA"{% if uf == 'PA' %}{{ sl }}{% endif %}>Pará</option>
+                                <option value="PB"{% if uf == 'PB' %}{{ sl }}{% endif %}>Paraíba</option>
+                                <option value="PR"{% if uf == 'PR' %}{{ sl }}{% endif %}>Paraná</option>
+                                <option value="PE"{% if uf == 'PE' %}{{ sl }}{% endif %}>Pernambuco</option>
+                                <option value="PI"{% if uf == 'PI' %}{{ sl }}{% endif %}>Piauí</option>
+                                <option value="RJ"{% if uf == 'RJ' %}{{ sl }}{% endif %}>Rio de Janeiro</option>
+                                <option value="RN"{% if uf == 'RN' %}{{ sl }}{% endif %}>Rio Grande do Norte</option>
+                                <option value="RS"{% if uf == 'RS' %}{{ sl }}{% endif %}>Rio Grande do Sul</option>
+                                <option value="RO"{% if uf == 'RO' %}{{ sl }}{% endif %}>Rondônia</option>
+                                <option value="RR"{% if uf == 'RR' %}{{ sl }}{% endif %}>Roraima</option>
+                                <option value="SC"{% if uf == 'SC' %}{{ sl }}{% endif %}>Santa Catarina</option>
+                                <option value="SP"{% if uf == 'SP' %}{{ sl }}{% endif %}>São Paulo</option>
+                                <option value="SE"{% if uf == 'SE' %}{{ sl }}{% endif %}>Sergipe</option>
+                                <option value="TO"{% if uf == 'TO' %}{{ sl }}{% endif %}>Tocantins</option>
                             </select>
                         </div>
                     </div>
                     <div class="form-group required">
                         <label class="col-sm-2 control-label" for="country-origin"><span data-toggle="tooltip" title="{{ help_country_origin }}">{{ entry_country_origin }}</span></label>
                         <div class="col-sm-10">
-                            <input type="text" id="country-origin" name="FC_CONTRY_ORIGIN" value="{{ data.FC_CONTRY_ORIGIN }}" placeholder="{{ entry_country_origin }}" class="form-control" required/>
+                            <input type="text" id="country-origin" name="FC_CONTRY_ORIGIN" value="{{ data.FC_CONTRY_ORIGIN }}" placeholder="{{ entry_country_origin }}" class="form-control country-origin" required/>
                         </div>
                     </div>
                     <div class="form-group required">
@@ -110,10 +110,25 @@
                     <div class="form-group required">
                         <label class="col-sm-2 control-label" for="carriers-number"><span data-toggle="tooltip" title="{{ help_carriers_number }}">{{ entry_carriers_number }}</span></label>
                         <div class="col-sm-10">
-                            <select name="FC_CARRIERS_NUMBER" id="carriers-number" class="form-control" required>
-                                <option value="0">Todas</option>
-                                <option value="1">Apenas uma por tipo</option>
+                            <select name="FC_CARRIERS_NUMBER" id="carriers-number" class="form-control" required>{% set cn = data.FC_CARRIERS_NUMBER %}
+                                <option value="0"{% if cn == '0' %}{{ sl }}{% endif %}>Todas</option>
+                                <option value="1"{% if cn == '1' %}{{ sl }}{% endif %}>Apenas uma por tipo</option>
                             </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="input-status">{{ entry_status }}</label>
+                        <div class="col-sm-10">
+                        <select name="FreteClick_status" id="input-status" class="form-control">{% set fs = FreteClick_status %}
+                            <option value="0"{% if fs == '0' %}{{ sl }}{% endif %}>{{ text_disabled }}</option>
+                            <option value="1"{% if fs == '1' %}{{ sl }}{% endif %}>{{ text_enabled }}</option>
+                        </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label" for="input-position">{{ entry_sort_order }}</label>
+                        <div class="col-sm-10">
+                            <input type="text" id="input-position" name="FreteClick_sort_order" value="{{ FreteClick_sort_order }}" placeholder="{{ entry_sort_order }}" class="form-control"/>
                         </div>
                     </div>
                 </form>
